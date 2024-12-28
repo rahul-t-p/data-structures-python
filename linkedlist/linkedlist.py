@@ -57,7 +57,7 @@ class LinkedList:
             ptr = ptr.next
         ptr.next = None
 
-    def del_intermediate(self, target_data):
+    def del_data(self, target_data):
         ptr = self.head
         if ptr.data == target_data: return self.del_first()
         while ptr is not None:
@@ -82,5 +82,5 @@ ll.del_first()
 ll.del_last()
 ll.insert_before(3, 2)
 ll.insert_before(1, 0)
-ll.del_intermediate(2)
+ll.del_data(2)
 ll.insert_after(1, 5)
