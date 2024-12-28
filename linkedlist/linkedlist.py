@@ -19,6 +19,7 @@ class LinkedList:
 
     def add_last(self, data):
         ptr = self.head
+        if ptr is None: return self.add_first(data)
         while ptr.next is not None:
             ptr = ptr.next
         ptr.next = Node(data)
